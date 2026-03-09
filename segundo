@@ -1,0 +1,74 @@
+:root {
+    --bg: #ffffff;
+    --text: #1e293b;
+    --primary: #8b5cf6; /* Violeta */
+    --accent: #f1f5f9;
+    --card: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg: #0f172a;
+    --text: #f8fafc;
+    --primary: #a78bfa;
+    --accent: #1e293b;
+    --card: #1e293b;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    transition: 0.3s ease;
+}
+
+.container { padding: 4rem 15%; }
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #6d28d9, #8b5cf6);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    background: white;
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 auto 1rem;
+}
+
+/* Proyectos con Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--accent);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* --- RESPONSIVIDAD (Paso 2 del Taller) --- */
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Se apilan en una sola columna */
+    }
+    .container { padding: 2rem 5%; }
+}
+
+/* Skills */
+.progress-bar { background: var(--accent); border-radius: 10px; height: 10px; margin: 10px 0 20px; }
+.fill { background: var(--primary); height: 100%; border-radius: 10px; }
